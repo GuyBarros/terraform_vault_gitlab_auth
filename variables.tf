@@ -1,7 +1,6 @@
 variable "gitlab_project_id" {
   type        = string
   description = "project id you want to enable JWT auth for"
-  default = "guydemos/demostack"
 }
 
 
