@@ -32,5 +32,16 @@ terraform plan
 terraform apply
 ```
 
+
+## Entities & JWT Auth
+JWT Auth Method creates entities based on the *user_claim* configured at the Vault JWT Auth Method role; These can be a field from the [JWT token itself](https://docs.gitlab.com/ee/ci/examples/authenticating-with-hashicorp-vault/index.html#how-it-works)
+
+depending on how the user_claim is configured, it is also possible to use the bound_claim to specify the match paramaters that allow authentication.
+
+
+
+
+
+
 ## Notice
 this currently is for reference , PRs welcomed.
