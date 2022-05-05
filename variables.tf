@@ -21,3 +21,8 @@ variable "gitlab_token_type" {
   description = "Token type for Vault tokens"
   default     = "default-service"
 }
+
+variable "gitlab_vault_server_url" {
+  type        = string
+  description = "Public address of the Vault server"
+}
