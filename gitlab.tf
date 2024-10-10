@@ -31,3 +31,10 @@ resource "gitlab_project_variable" "vault_auth_path" {
   value     = vault_jwt_auth_backend.gitlab.path
   protected = false
 }
+
+resource "gitlab_project_variable" "vault_namespace" {
+  project   = data.gitlab_project.vault.id
+  key       = "VAULT_NAMESPACE"
+  value     = data.vault_namespace.current.id
+  protected = false
+}
