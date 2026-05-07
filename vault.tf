@@ -45,6 +45,8 @@ resource "vault_jwt_auth_backend_role" "pipeline" {
   role_name      = "app-pipeline"
   token_policies = ["default", "pipeline-policy"]
 
+  bound_audiences=["https://gitlab.com" ]
+
   bound_claims = {
     iss         = "gitlab.com,https://gitlab.com"
     project_id = data.gitlab_project.vault.id
@@ -80,6 +82,8 @@ resource "vault_jwt_auth_backend_role" "generic" {
 
   role_name      = "generic"
   token_policies = ["default", "pipeline-policy"]
+
+  bound_audiences=["https://gitlab.com" ]
 
   bound_claims = {
     iss         = "gitlab.com,https://gitlab.com"
